@@ -17,6 +17,11 @@ each field in here is responsible to query different structures of data.
 
 
 mutations is responsinle for CREATE, UPDATE, DELETE operations.
+mutations are mapped to a defined mutation constant,
+
+a mutation has a name,
+
+inside mutation we have fields, each field is a function responsible to mutation some part of the data 
 
 JSON server is used as mock db server.
 

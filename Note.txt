@@ -1,0 +1,27 @@
+FLOW
+
+1. make a graphql call with desired structure of response --> connects to express '/graphql' route. 
+2. expressGraphQL({
+    schema: schema,
+    graphiql: true
+})
+is the handler of this route.
+
+
+3. iniside schema  query and mutations are defined
+
+
+query is responsible for READ operations.
+query is mapped to rootQuery, rootQuery consists of fields object.
+each field in here is responsible to query different structures of data.
+
+
+mutations is responsinle for CREATE, UPDATE, DELETE operations.
+
+JSON server is used as mock db server.
+
+
+4. While sending back the response from client to server, the response passes through graphql hence only requested data is sent. Nothing less/more.
+
+npm run dev:server ->  "nodemon server.js",
+npm run json:server -> "json-server --watch data.json"
